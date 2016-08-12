@@ -63,17 +63,23 @@ namespace Ass1App
 			// aapt resource value: 0x7f050012
 			public const int butBack = 2131034130;
 			
-			// aapt resource value: 0x7f050016
-			public const int butExit = 2131034134;
+			// aapt resource value: 0x7f050019
+			public const int butExit = 2131034137;
 			
-			// aapt resource value: 0x7f050015
-			public const int butStart = 2131034133;
+			// aapt resource value: 0x7f050018
+			public const int butStart = 2131034136;
 			
 			// aapt resource value: 0x7f050011
 			public const int currentScore = 2131034129;
 			
 			// aapt resource value: 0x7f050001
 			public const int gridLayout1 = 2131034113;
+			
+			// aapt resource value: 0x7f050015
+			public const int linearLayout1 = 2131034133;
+			
+			// aapt resource value: 0x7f050017
+			public const int textName = 2131034135;
 			
 			// aapt resource value: 0x7f050014
 			public const int textScore = 2131034132;
@@ -83,6 +89,9 @@ namespace Ass1App
 			
 			// aapt resource value: 0x7f050013
 			public const int textView2 = 2131034131;
+			
+			// aapt resource value: 0x7f050016
+			public const int textView3 = 2131034134;
 			
 			// aapt resource value: 0x7f050002
 			public const int toggleButton1 = 2131034114;

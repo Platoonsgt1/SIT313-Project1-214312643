@@ -15,13 +15,16 @@ public final class R {
     }
     public static final class id {
         public static final int butBack=0x7f050012;
-        public static final int butExit=0x7f050016;
-        public static final int butStart=0x7f050015;
+        public static final int butExit=0x7f050019;
+        public static final int butStart=0x7f050018;
         public static final int currentScore=0x7f050011;
         public static final int gridLayout1=0x7f050001;
+        public static final int linearLayout1=0x7f050015;
+        public static final int textName=0x7f050017;
         public static final int textScore=0x7f050014;
         public static final int textView1=0x7f050000;
         public static final int textView2=0x7f050013;
+        public static final int textView3=0x7f050016;
         public static final int toggleButton1=0x7f050002;
         public static final int toggleButton10=0x7f05000b;
         public static final int toggleButton11=0x7f05000c;

@@ -29,6 +29,30 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:maxLines="10" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="Name: "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textName"
+            android:inputType="text"
+            android:maxLength="32"
+            android:editable="true"
+            android:enabled="true"
+            android:text="AAA"
+            android:textIsSelectable="true" />
+    </LinearLayout>
     <Button
         android:text="Start"
         android:layout_width="wrap_content"

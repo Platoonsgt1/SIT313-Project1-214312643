@@ -15,6 +15,12 @@ namespace Ass1App
     [Activity(Label = "GameActivity")]
     public class GameActivity : Activity
     {
+        //Setup public variables
+        List<ToggleButton> Switchlist = new List<ToggleButton>();
+        int Score = 1000;
+        List<int> switchAction = new List<int>();
+        Random Rgen = new Random();
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -23,12 +29,10 @@ namespace Ass1App
             SetContentView(Resource.Layout.Game);
 
             // Setup score and score text
-            int Score = 1000;
             TextView CurrentScore = FindViewById< TextView > (Resource.Id.currentScore);
             CurrentScore.Text = "Score: " + Score;
 
             // Setup all the togglebuttons
-            List<ToggleButton> Switchlist = new List<ToggleButton>();
             Switchlist.Insert(0, FindViewById<ToggleButton>(Resource.Id.toggleButton1));
             Switchlist.Insert(1, FindViewById<ToggleButton>(Resource.Id.toggleButton2));
             Switchlist.Insert(2, FindViewById<ToggleButton>(Resource.Id.toggleButton3));
@@ -45,8 +49,6 @@ namespace Ass1App
             Switchlist.Insert(13, FindViewById<ToggleButton>(Resource.Id.toggleButton14));
             Switchlist.Insert(14, FindViewById<ToggleButton>(Resource.Id.toggleButton15));
 
-            List<int> switchAction = new List<int>();
-            Random Rgen = new Random();
 
             // Setup switch action values
             for (int i = 0; i < Switchlist.Count; i++)
@@ -58,238 +60,116 @@ namespace Ass1App
             //Setup each switch's actions (I would have done this in a loop, but I couldn't pass the i value into the array position)
             Switchlist[0].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[0];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(0);
             };
             Switchlist[1].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[1];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(1);
             };
             Switchlist[2].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[2];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(2);
             };
             Switchlist[3].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[3];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(3);
             };
             Switchlist[4].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[4];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(4);
             };
             Switchlist[5].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[5];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(5);
             };
             Switchlist[6].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[6];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(6);
             };
-            Switchlist[7].Click += delegate //This one performs a random action each time, rather than having an action set at the start of the game.
+            Switchlist[7].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = Rgen.Next((2 << 15) - 1) & (((2 << 15) - 1) - (2 << 7));
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(7);
             };
             Switchlist[8].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[8];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(8);
             };
             Switchlist[9].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[9];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(9);
             };
             Switchlist[10].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[10];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(10);
             };
             Switchlist[11].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[11];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(11);
             };
             Switchlist[12].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[12];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(12);
             };
             Switchlist[13].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[13];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(13);
             };
             Switchlist[14].Click += delegate
             {
-                CurrentScore.Text = "Score: " + (--Score);
-
-                //Perform action based on switch position in list
-                var Action = switchAction[14];
-                //Perform action on each other switch based on this switch's associated value
-                for (int j = 0; j < Switchlist.Count; j++)
-                {
-                    if ((Action & (2 << j)) == (2 << j))
-                    {
-                        Switchlist[j].Toggle();
-                    }
-                }
+                Switch(14);
             };
 
             //Setup exit button
             Button Back = FindViewById<Button>(Resource.Id.butBack);
             Back.Click += delegate
             {
+                bool GameEnd = true;
+                for (int j = 0; j < Switchlist.Count; j++)
+                {
+                    if (!Switchlist[j].Checked)
+                    { GameEnd = false; }
+                }
+                if (GameEnd)
+                {
+                    // Update the highscore table, I'm assuming it's possible to do this.
+                    SharedData.ShareScore = Score;
+                    SharedData.ShareName = "???";
+                    SharedData.ShareWin = true;
+                }
                 Finish();
             };
 
+        }
+        void Switch(int i)
+        {
+            //Update Score
+            TextView CurrentScore = FindViewById<TextView>(Resource.Id.currentScore);
+            CurrentScore.Text = "Score: " + (--Score);
 
+            //Perform action based on switch position in list
+            var Action = switchAction[i];
+            if (Action == 0) //This is used for the center button (Switch 7), and any other switch that happens to have a 0 value
+            { Action = Rgen.Next((2 << 15) - 1) & (((2 << 15) - 1) - (2 << 7)); }
+            //Perform action on each other switch based on this switch's associated value
+            bool GameEnd = true;
+            for (int j = 0; j < Switchlist.Count; j++)
+            {
+                if ((Action & (2 << j)) == (2 << j))
+                { Switchlist[j].Toggle(); }
+                if (!Switchlist[j].Checked)
+                { GameEnd = false; }
+            }
+            if (GameEnd)
+            {
+                // Get the Back button
+                Button Back = FindViewById<Button>(Resource.Id.butBack);
+                Back.Text = "Finish!";
+
+                // Deactivate switches
+                for (int j = 0; j < Switchlist.Count; j++)
+                { Switchlist[j].Activated = false; }
+            }
+            return;
         }
     }
 }
