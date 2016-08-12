@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -23,8 +27,7 @@ namespace Ass1App
             }
         }
 
-        //Public variables
-        JavaList<Score> Scorelist = new JavaList<Score>();
+        List<Score> Scorelist = new List<Score>();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -35,6 +38,7 @@ namespace Ass1App
             {
                 Scorelist.Insert(i, new Score((i) * 111, "AAA"));
             }
+            //Public variables
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
