@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Switches"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:layout_gravity="center"
+        android:layout_weight="0.4"
+        android:gravity="center" />
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridLayout1"
+        android:layout_gravity="center"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:rowCount="5"
+        android:layout_weight="0.5">
+        <ToggleButton
+            android:id="@+id/toggleButton1" />
+        <ToggleButton
+            android:id="@+id/toggleButton2" />
+        <ToggleButton
+            android:id="@+id/toggleButton3" />
+        <ToggleButton
+            android:id="@+id/toggleButton4" />
+        <ToggleButton
+            android:id="@+id/toggleButton5" />
+        <ToggleButton
+            android:id="@+id/toggleButton6" />
+        <ToggleButton
+            android:id="@+id/toggleButton7" />
+        <ToggleButton
+            android:id="@+id/toggleButton8" />
+        <ToggleButton
+            android:id="@+id/toggleButton9" />
+        <ToggleButton
+            android:id="@+id/toggleButton10" />
+        <ToggleButton
+            android:id="@+id/toggleButton11" />
+        <ToggleButton
+            android:id="@+id/toggleButton12" />
+        <ToggleButton
+            android:id="@+id/toggleButton13" />
+        <ToggleButton
+            android:id="@+id/toggleButton14" />
+        <ToggleButton
+            android:id="@+id/toggleButton15" />
+    </GridLayout>
+    <TextView
+        android:text="Score: 0000"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentScore"
+        android:layout_weight="0.2"
+        android:layout_gravity="center"
+        android:gravity="center" />
+    <Button
+        android:text="Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/butBack"
+        android:layout_weight="0.2"
+        android:layout_gravity="center" />
+</LinearLayout>
