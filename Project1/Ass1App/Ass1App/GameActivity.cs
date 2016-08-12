@@ -133,7 +133,6 @@ namespace Ass1App
                 {
                     // Update the highscore table, I'm assuming it's possible to do this.
                     SharedData.ShareScore = Score;
-                    SharedData.ShareName = "???";
                     SharedData.ShareWin = true;
                 }
                 Finish();
@@ -167,7 +166,7 @@ namespace Ass1App
 
                 // Deactivate switches
                 for (int j = 0; j < Switchlist.Count; j++)
-                { Switchlist[j].Activated = false; }
+                { Switchlist[j].Enabled = false; }
             }
             return;
         }
